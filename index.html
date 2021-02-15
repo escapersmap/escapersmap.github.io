@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ESCAPERS</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
 
+  <!-- 지역 button -->
   <script type="text/javascript">
   var bDisplay = true;
-  function doDisplay(){
-    var con = document.getElementById("myDIV");
+  function doDisplayGangnam(){
+    var con = document.getElementById("Gangnam");
     if(con.style.visibility=='visible'){
-      con.style.display = 'block';
+      con.style.display = 'none';
       con.style.visibility = 'hidden';
     }else{
       con.style.display = 'block';
@@ -21,6 +21,49 @@
     }
   }
   </script>
+
+  <script type="text/javascript">
+  var bDisplay = true;
+  function doDisplayHongdae(){
+    var con = document.getElementById("Hongdae");
+    if(con.style.visibility=='visible'){
+      con.style.display = 'none';
+      con.style.visibility = 'hidden';
+    }else{
+      con.style.display = 'block';
+      con.style.visibility = 'visible'
+    }
+  }
+  </script>
+
+  <script type="text/javascript">
+    var bDisplay = true;
+    function doDisplayIndex(){
+      var con = document.getElementById("Index");
+      if(con.style.visibility=='visible'){
+        con.style.display = 'none';
+        con.style.visibility = 'hidden';
+      }else{
+        con.style.display = 'block';
+        con.style.visibility = 'visible'
+      }
+    }
+    </script>
+
+  <script type="text/javascript">
+    var bDisplay = true;
+    function doDisplayRegion(){
+      var con = document.getElementById("Region");
+      if(con.style.visibility=='visible'){
+        con.style.display = 'none';
+        con.style.visibility = 'hidden';
+      }else{
+        con.style.display = 'block';
+        con.style.visibility = 'visible'
+      }
+    }
+    </script>
+
   <style>
     @font-face {
       font-family: 'NanumBarunpen';
@@ -33,45 +76,129 @@
     font-family: 'NanumBarunpen';
   }
 
-  nav {
-    font-size: 30px;
-  }
 
-  #myDIV {
-    
-    display:block; 
+  #Gangnam {
+    display:none; 
     visibility:hidden;
    }
+
+  #Hongdae {
+    display:none; 
+    visibility:hidden;
+   }
+
+  #Region {
+    display:none; 
+    visibility:hidden;
+  }
+
+  #Index {
+    display:none; 
+    visibility:hidden;
+  }
+   
   </style>
+
 </head>
 <body>
 
   <!-- nav -->
-  <nav class="fixed-top d-flex justify-content-between align-items-center bg-dark py-2">
-    <a href="#" class="ms-3  text-white text-decoration-none fs-4">
+  <nav class="fixed-top d-flex justify-content-between align-items-center bg-dark py-3 fs-4">
+    <a href="#" class="ms-3  text-white text-decoration-none">
      TEAM. BLOSSOM
     </a>
+    
   </nav>
   
 
-
-  <div class="display-3 text-white">TEAM. BLOSSOM</div>
-  <!-- header-->
-  <header class="d-flex flex-column justify-content-center align-items-center mt-5 pt-3">
-    <div class="display-5 text-white">TEAM. BLOSSOM</div>
-    <div class="display-1 m-3">Web PAGE</div>
-    <div class="display-1 m-3 mb-5">FOR ESCAPERS</div>
-    <a href="#" class="btn btn-dark my-5 col-3">Let's Go!</a>
+  <!-- header -->
+  <header class="d-flex flex-column justify-content-center align-items-center mt-5">
+    <h1 class="display-3 text-white ms-5">Team.Blossom</h1>
+    <h1 class="display-3 text-white ms-5">Team.Blossom</h1>
+    <h1 class=" display-1 my-5">Escaper's Map</h1>
+    <h1 class="display-3 text-white ms-5">Team.Blossom</h1>
   </header>
 
 
 
-<!-- 4. Footer 
-<footer class="d-flex justify-content-center align-items-center bg-dark fixed-bottom py-2">
-  <p class="m-0 text-white">Web Page for Escapers. Created by Team. Blossom</p>
-</footer>
--->
+  <!-- 지역 button -->
+  <div>
+    <h2 class="mx-5">✔ 지역</h2>
+    <div class="d-flex justify-content-center col-12" style="margin-top: -30px;">
+      <a href="javascript:doDisplayGangnam();" class="btn btn-dark mx-1 my-5 col-2">강 남</a>
+      <a href="javascript:doDisplay();" class="btn btn-dark mx-1 my-5 col-2">건 대</a>
+      <a href="javascript:doDisplayHongdae();" class="btn btn-dark mx-1 my-5 col-2">홍 대</a>
+      <a href="javascript:doDisplay();" class="btn btn-dark mx-1 my-5 col-2">신 촌</a>
+    </div>
+    <div class="d-flex justify-content-center col-12" style="margin-top: -70px;">
+      <a href="javascript:doDisplay();" class="btn btn-dark mx-1 my-5 col-2 d-flex  justify-content-center align-items-center" style="font-size: 14px;">대학로</a>
+      <a href="javascript:doDisplay();" class="btn btn-dark mx-1 my-5 col-2">신 림</a>
+      <a href="javascript:doDisplay();" class="btn btn-dark mx-1 my-5 col-2">일 산</a>
+      <a href="javascript:doDisplay();" class="btn btn-dark mx-1 my-5 col-2">수 원</a>
+  </div>
+  </div>
 
+  <!--강남-->
+  <div>
+    <div id="Gangnam" class="container">
+      <h3>📌강 남</h3>
+      <img src="./assets/gangnam1.png" alt="gangnam1" style="max-width: 100%; height: auto;">
+      <div class="my-4">
+        <div  class="fw-bold text-danger my-2">Sector 1</div>
+        <div class="col-3 d-flex justify-content-between">
+          <div>1. 꼭그닭</div>
+          <div><a href="#" class="text-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#ggokgeudak">></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--modal 강남-->
+  <div>
+    <!--Sector 1-->
+    <div>
+      <!-- 1. 꼭그닭 -->
+      <div class="modal fade" id="ggokgeudak" tabindex="-1" aria-labelledby="ggokgeudakLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold" id="ggokgeudakLabel">꼭그닭</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3 mx-3">
+                <img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200404_124%2F1585989533920kp1zF_PNG%2FIJ4SLp8RhBAFRDxAJFr6h4kG.png" alt="---" style="max-width: 100%; height: auto;">
+                <img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200327_221%2F1585311451908Iq2hm_JPEG%2F%25C4%25A1%25C1%25EE%25C7%25C7%25C0%25DA.jpg" alt="---" style="max-width: 100%; height: auto;">
+              </div>
+              <hr>
+              <h1 class="fs-6">빠네치킨과 수제맥주가 맛있는 강남 치킨 맛집</h1>
+              <hr>
+              <h1 class="fs-6 text-dark fw-bold">🕒운영시간 : <span>매일 13:00 ~ 24:00</span></h1> 
+              <h1 class="fs-6 text-dark fw-bold">📞Contact : <span>02-565-5335</span></h1>
+              <h1></h1>
+              
+              <h1 class="fs-6 text-dark fw-bold mt-3"><a href="https://map.naver.com/v5/entry/place/35734815?c=14140107.3603889,4509461.0057837,15,0,0,0,dh" class="text-decoration-none text-secondary fw-bold"  target=_blank>찾아가는 길</a></h1>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+  <!-- Footer-->
+  <div>
+    <h1 class="display-3 text-white m-3">Team.Blossom</h1>
+    <footer class="d-flex justify-content-center align-items-center bg-dark py-1 mt-5 fixed-bottom">
+      <p class="m-0 text-white">Web Page for Escapers. Created by Team. Blossom</p>
+    </footer>
+  </div>
+  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 
